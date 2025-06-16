@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio de Demos Web</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Estilos personalizados para la tipografía y el efecto de la tarjeta */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f8fafc; /* bg-slate-50 */
+        }
+
+        /* El efecto de "spotlight" se logra con un gradiente radial.
+         Se actualiza con JavaScript para seguir la posición del cursor.
+         El color del gradiente se ha cambiado a un tono cálido.
+        */
+        .card::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(
+                600px circle at var(--mouse-x) var(--mouse-y),
+                rgba(251, 146, 60, 0.15), /* Naranja cálido */
+                transparent 40%
+            );
+            border-radius: inherit;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+
+        .card:hover::before {
+            opacity: 1;
+        }
+
+        /* Contenedor para el contenido de la tarjeta para asegurar que esté sobre el efecto */
+        .card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Fondo con patrón de puntos sutil en tono claro */
+        .main-background {
+            background-image: radial-gradient(#e2e8f0 1px, transparent 0); /* gris claro */
+            background-size: 30px 30px;
+        }
+    </style>
+</head>
+<body class="text-slate-800">
+
+    <div class="relative min-h-screen w-full main-background overflow-hidden">
+        <!-- Contenido principal -->
+        <div class="container mx-auto px-4 py-12 sm:py-16">
+
+            <!-- Encabezado -->
+            <header class="text-center mb-12">
+                <h1 class="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight text-transparent bg-clip-text bg-gradient-to-r from-amber-500 to-orange-600">
+                    Demo de Sitios Web
+                </h1>
+                <p class="mt-4 max-w-2xl mx-auto text-lg text-slate-600">
+                    Explora nuestras demostraciones interactivas. Cada proyecto es una muestra de nuestro compromiso con la calidad y el diseño moderno.
+                </p>
+            </header>
+
+            <!-- Grid de Tarjetas de Demo (HTML Estático) -->
+            <main id="demo-grid" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+                
+                <!-- Tarjeta 1 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="demo01/index.html" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 1</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 2 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 2</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 3 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 3</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 4 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 4</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 5 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 5</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 6 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 6</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 7 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 7</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 8 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 8</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 9 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 9</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 10 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 10</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 11 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 11</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 12 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 12</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 13 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 13</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 14 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 14</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 15 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 15</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 16 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 16</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 17 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 17</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 18 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 18</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 19 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 19</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+                <!-- Tarjeta 20 -->
+                <!-- IMPORTANTE: Reemplaza '#' con tu enlace real -->
+                <a href="#" class="card group relative block p-6 h-48 flex items-center justify-center rounded-xl bg-white/80 backdrop-blur-sm border border-slate-200 shadow-lg transition-all duration-300 hover:border-orange-300 hover:shadow-orange-100 hover:-translate-y-1">
+                    <div class="card-content text-center">
+                        <h3 class="text-2xl font-bold text-slate-800 transition-colors duration-300 group-hover:text-orange-600">Demo 20</h3>
+                        <p class="mt-2 text-sm text-slate-500 transition-colors duration-300 group-hover:text-slate-600">Ver proyecto</p>
+                    </div>
+                </a>
+
+            </main>
+            
+            <!-- Sección de Llamada a la Acción (CTA) -->
+            <footer class="text-center mt-16 py-8 border-t border-slate-200">
+                <h2 class="text-2xl font-bold text-slate-800">¿Te interesa un diseño?</h2>
+                <p class="mt-3 max-w-xl mx-auto text-slate-600">
+                    Si alguno de nuestros demos te ha inspirado, contáctanos para empezar a construir tu proyecto ideal.
+                </p>
+                <div class="mt-6">
+                    <!-- IMPORTANTE: Reemplaza '#' con el enlace a tu formulario -->
+                    <a href="#" class="inline-block bg-orange-500 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:bg-orange-600 transition-all duration-300 transform hover:-translate-y-0.5">
+                        Ir al Formulario de Contacto
+                    </a>
+                </div>
+            </footer>
+
+        </div>
+    </div>
+
+    <script>
+        // Listener para el efecto "spotlight" en el grid
+        document.getElementById('demo-grid').addEventListener('mousemove', e => {
+            const card = e.target.closest('.card');
+            if (card) {
+                const rect = card.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                
+                // Actualiza las variables CSS para la posición del cursor
+                card.style.setProperty('--mouse-x', `${x}px`);
+                card.style.setProperty('--mouse-y', `${y}px`);
+            }
+        });
+    </script>
+</body>
+</html>

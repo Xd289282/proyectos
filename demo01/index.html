@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juan Pérez - Servicios Contables Profesionales</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom Styles -->
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+        }
+        .hero-bg {
+            /* Updated background image */
+            background-image: linear-gradient(to right, rgba(20, 36, 50, 0.9), rgba(10, 26, 44, 0.85)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        .section-title {
+            @apply text-3xl font-bold text-gray-800 text-center sm:text-4xl;
+        }
+        .section-subtitle {
+            @apply mt-2 text-lg text-gray-600 text-center max-w-2xl mx-auto;
+        }
+        .service-card {
+            @apply bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out;
+        }
+        .btn {
+            @apply inline-block px-8 py-3 text-lg font-semibold text-white rounded-lg shadow-md transition-transform duration-300;
+        }
+        .btn-primary {
+            @apply bg-blue-600 hover:bg-blue-700 transform hover:scale-105;
+        }
+        .btn-secondary {
+            @apply bg-gray-700 hover:bg-gray-800 transform hover:scale-105;
+        }
+        .testimonial-card {
+            @apply bg-white p-8 rounded-xl shadow-lg h-full flex flex-col justify-between;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+
+    <!-- Header & Navigation -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+        <nav class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-gray-800">
+                <span class="text-blue-600">JP</span> Contadores
+            </a>
+            <div class="hidden md:flex space-x-6">
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition duration-300">Servicios</a>
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition duration-300">Sobre Mí</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-blue-600 transition duration-300">Testimonios</a>
+                <a href="#contact" class="text-gray-600 hover:text-blue-600 transition duration-300">Contacto</a>
+            </div>
+            <a href="#contact" class="hidden md:block btn btn-primary px-6 py-2 text-sm">Contáctame</a>
+            <!-- Mobile Menu Button -->
+            <button id="mobile-menu-button" class="md:hidden text-gray-700 focus:outline-none">
+                 <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path></svg>
+            </button>
+        </nav>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden px-6 pt-2 pb-4">
+            <a href="#services" class="block py-2 text-gray-600 hover:text-blue-600">Servicios</a>
+            <a href="#about" class="block py-2 text-gray-600 hover:text-blue-600">Sobre Mí</a>
+            <a href="#testimonials" class="block py-2 text-gray-600 hover:text-blue-600">Testimonios</a>
+            <a href="#contact" class="block py-2 text-gray-600 hover:text-blue-600">Contacto</a>
+             <a href="#contact" class="mt-2 btn btn-primary w-full text-center">Contáctame</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-bg text-white">
+        <div class="container mx-auto px-6 py-24 sm:py-32 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold leading-tight">Soluciones Contables para tu Éxito Financiero</h1>
+            <p class="mt-6 text-lg md:text-xl max-w-3xl mx-auto text-gray-200">Simplifico tus finanzas para que te concentres en hacer crecer tu negocio. Asesoría fiscal, contabilidad y gestión para profesionales y PyMEs.</p>
+            <div class="mt-10">
+                <a href="#contact" class="btn btn-primary">Solicita una Asesoría Gratuita</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Nuestros Servicios</h2>
+            <p class="section-subtitle">Ofrezco una gama completa de servicios contables diseñados para satisfacer las necesidades específicas de tu empresa.</p>
+            <div class="mt-12 grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Service Card 1 -->
+                <div class="service-card">
+                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full">
+                        <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-800">Contabilidad General</h3>
+                    <p class="mt-2 text-gray-600">Manejo integral de tus libros contables, estados financieros y conciliaciones bancarias para una visión clara de tu salud financiera.</p>
+                </div>
+                <!-- Service Card 2 -->
+                <div class="service-card">
+                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full">
+                         <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 17h8m0 0V9m0 8l-8-8-4 4-6-6"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-800">Declaraciones de Impuestos</h3>
+                    <p class="mt-2 text-gray-600">Preparación y presentación de declaraciones de impuestos mensuales y anuales, asegurando el cumplimiento y optimizando tu carga fiscal.</p>
+                </div>
+                <!-- Service Card 3 -->
+                <div class="service-card">
+                    <div class="flex items-center justify-center h-16 w-16 bg-blue-100 rounded-full">
+                         <svg class="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v.01"></path></svg>
+                    </div>
+                    <h3 class="mt-6 text-xl font-bold text-gray-800">Asesoría Fiscal y Financiera</h3>
+                    <p class="mt-2 text-gray-600">Estrategias personalizadas para reducir impuestos, mejorar la rentabilidad y planificar el futuro financiero de tu negocio.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col md:flex-row items-center gap-12 lg:gap-20">
+                <div class="md:w-1/2">
+                    <!-- Updated image -->
+                    <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=2070&auto=format&fit=crop" 
+                         alt="Retrato del contador Juan Pérez en un entorno profesional" 
+                         class="rounded-xl shadow-2xl w-full h-full object-cover"
+                         onerror="this.onerror=null;this.src='https://placehold.co/600x400/e2e8f0/334155?text=Contador+Profesional';">
+                </div>
+                <div class="md:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-800 sm:text-4xl">Conoce a tu Aliado Financiero</h2>
+                    <p class="mt-4 text-lg text-gray-600">Soy Juan Pérez, un contador público certificado con más de 15 años de experiencia ayudando a emprendedores y pequeñas empresas a navegar el complejo mundo de las finanzas. Mi misión es ofrecerte tranquilidad y confianza, manejando tu contabilidad con precisión y ética.</p>
+                    <p class="mt-4 text-gray-600">Creo en construir relaciones a largo plazo basadas en la confianza y los resultados. Más que un proveedor, seré tu socio estratégico, comprometido con el crecimiento y la estabilidad de tu negocio.</p>
+                    <div class="mt-8">
+                         <a href="#contact" class="btn btn-secondary">Hablemos de tu Negocio</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-20 bg-gray-100">
+        <div class="container mx-auto px-6">
+            <h2 class="section-title">Lo que dicen nuestros clientes</h2>
+            <p class="section-subtitle">La confianza y satisfacción de mis clientes es mi mayor recompensa.</p>
+            <div class="mt-12 grid gap-8 grid-cols-1 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="testimonial-card">
+                    <p class="text-gray-600">"Desde que Juan maneja nuestra contabilidad, tenemos una claridad increíble sobre nuestras finanzas. Su profesionalismo es impecable. ¡Totalmente recomendado!"</p>
+                    <div class="mt-6 flex items-center">
+                         <!-- Updated image -->
+                        <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?q=80&w=1888&auto=format&fit=crop" 
+                             alt="Avatar de María Andrade" 
+                             class="w-14 h-14 rounded-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/48x48/dbeafe/1e3a8a?text=MA';">
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">María Andrade</p>
+                            <p class="text-sm text-gray-500">CEO de Creativos Digitales</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Testimonial 2 -->
+                <div class="testimonial-card">
+                    <p class="text-gray-600">"La asesoría fiscal de Juan nos ha ahorrado miles. Siempre está disponible para resolver dudas y su enfoque es proactivo, no reactivo."</p>
+                    <div class="mt-6 flex items-center">
+                        <!-- Updated image -->
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1887&auto=format&fit=crop" 
+                             alt="Avatar de Luis Garza" 
+                             class="w-14 h-14 rounded-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/48x48/dbeafe/1e3a8a?text=LG';">
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">Luis Garza</p>
+                            <p class="text-sm text-gray-500">Dueño de Café del Sol</p>
+                        </div>
+                    </div>
+                </div>
+                 <!-- Testimonial 3 -->
+                <div class="testimonial-card">
+                    <p class="text-gray-600">"Un servicio excepcional. Organizado, puntual y muy claro en sus explicaciones. Por fin entiendo mis números. Gracias, Juan."</p>
+                    <div class="mt-6 flex items-center">
+                        <!-- Updated image -->
+                        <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1887&auto=format&fit=crop" 
+                             alt="Avatar de Sofía Ramos" 
+                             class="w-14 h-14 rounded-full object-cover"
+                             onerror="this.onerror=null;this.src='https://placehold.co/48x48/dbeafe/1e3a8a?text=SR';">
+                        <div class="ml-4">
+                            <p class="font-bold text-gray-800">Sofía Ramos</p>
+                            <p class="text-sm text-gray-500">Diseñadora Freelance</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+             <h2 class="section-title">¿Listo para tomar el control de tus finanzas?</h2>
+             <p class="section-subtitle">Completa el formulario y recibirás una primera asesoría completamente gratis para evaluar las necesidades de tu negocio.</p>
+             <div class="mt-12 max-w-2xl mx-auto bg-gray-50 p-8 rounded-xl shadow-2xl">
+                <form action="#" method="POST">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div>
+                            <label for="name" class="font-medium text-gray-700">Nombre Completo</label>
+                            <input type="text" name="name" id="name" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                         <div>
+                            <label for="email" class="font-medium text-gray-700">Correo Electrónico</label>
+                            <input type="email" name="email" id="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        </div>
+                    </div>
+                    <div class="mt-6">
+                        <label for="service" class="font-medium text-gray-700">Servicio de Interés</label>
+                        <select id="service" name="service" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                            <option>Contabilidad General</option>
+                            <option>Declaración de Impuestos</option>
+                            <option>Asesoría Fiscal</option>
+                            <option>Otro</option>
+                        </select>
+                    </div>
+                     <div class="mt-6">
+                        <label for="message" class="font-medium text-gray-700">Mensaje</label>
+                        <textarea name="message" id="message" rows="4" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                    </div>
+                    <div class="mt-8 text-center">
+                        <button type="submit" class="btn btn-primary w-full sm:w-auto">Enviar Mensaje</button>
+                    </div>
+                </form>
+             </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white">
+        <div class="container mx-auto px-6 py-12">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                <div>
+                    <h3 class="text-xl font-bold"><span class="text-blue-400">JP</span> Contadores</h3>
+                    <p class="mt-2 text-gray-400">Tu éxito es nuestro objetivo.</p>
+                </div>
+                 <div>
+                    <h3 class="text-lg font-semibold">Contacto</h3>
+                    <ul class="mt-2 space-y-2 text-gray-400">
+                        <li><a href="mailto:contacto@jpcontadores.com" class="hover:text-white">contacto@jpcontadores.com</a></li>
+                        <li><a href="tel:+521234567890" class="hover:text-white">+52 123 456 7890</a></li>
+                        <li>Pachuca, Hidalgo, México</li>
+                    </ul>
+                </div>
+                 <div>
+                    <h3 class="text-lg font-semibold">Sígueme</h3>
+                    <div class="flex justify-center md:justify-start mt-4 space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.675 0h-21.35C.59 0 0 .59 0 1.325v21.351C0 23.41.59 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.735 0 1.325-.59 1.325-1.325V1.325C24 .59 23.401 0 22.675 0z"/></svg></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.664-4.919-4.919-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919.058-1.265.069-1.645.069-4.849zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.162 6.162 6.162 6.162-2.759 6.162-6.162-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4s1.791-4 4-4 4 1.79 4 4-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44 1.441-.645 1.441-1.44-.645-1.44-1.441-1.44z"/></svg></a>
+                         <a href="#" class="text-gray-400 hover:text-white"><svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M21.582 0h-19.164C1.083 0 0 .995 0 2.218v19.564C0 23.005.995 24 2.218 24h19.564C23.005 24 24 23.005 24 21.782V2.418C24 1.083 23.005 0 21.582 0zM8.225 20.447H4.512V9.082h3.713v11.365zM6.368 7.512h-.022c-1.22 0-2-.834-2-1.873.023-1.062.802-1.873 2.022-1.873 1.22 0 1.978.81 2 1.873-.023 1.04-.782 1.873-2 1.873zm12.13 12.935h-3.713v-5.69c0-1.359-.487-2.285-1.697-2.285-1.12 0-1.5.753-1.746 1.486-.09.263-.113.623-.113.984v5.505H8.225s.047-10.287 0-11.365h3.713v1.589h.047c.482-.879 1.667-2.133 3.35-2.133 2.45 0 4.29 1.594 4.29 5.033v6.876z"/></svg></a>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-12 border-t border-gray-700 pt-6 text-center text-gray-400 text-sm">
+                <p>&copy; <span id="year"></span> Juan Pérez Contadores. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Set current year in footer
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
